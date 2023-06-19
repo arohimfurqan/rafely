@@ -22,6 +22,7 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
         'role' => \App\Filters\RoleMiddleware::class,
+        'auth' => \App\Filters\AuthMiddleware::class,
     ];
 
     /**

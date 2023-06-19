@@ -48,9 +48,8 @@ class LoginController extends BaseController
 
                     $data = [
                         'logged_in' => true,
-                        'role' => 'admin' // Ganti dengan peran sesuai dengan kebutuhan
+                        'role' => $user->role // Ganti dengan peran sesuai dengan kebutuhan
                     ];
-
                     session()->set($data);
                     // Autentikasi sukses
                     return redirect()->to('/');

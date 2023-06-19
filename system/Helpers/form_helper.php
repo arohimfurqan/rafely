@@ -801,11 +801,4 @@ if (!function_exists('parse_form_attributes')) {
 
         return $att;
     }
-
-    if (!function_exists('old')) {
-        function old($fieldName, $validation)
-        {
-            return $validation->getError($fieldName) ? set_value($fieldName) : '';
-        }
-    }
 }

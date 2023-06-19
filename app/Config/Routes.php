@@ -29,9 +29,9 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index', ['filter' => 'role:admin,superadmin']);
+$routes->get('/', 'Home::index', ['filter' => 'auth']);
 $routes->match(['get', 'post'], '/login', 'LoginController::index');
-$routes->get('/logout', 'LoginController::logout');
+$routes->get('/logout', 'LoginController::logout', ['filter' => 'auth']);
 
 /*
  * --------------------------------------------------------------------
